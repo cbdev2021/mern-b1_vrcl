@@ -23,6 +23,8 @@
     "js-search": "^2.0.0",
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^7.1.0",
+    "ts-node": "^10.9.1",
+    "tsc": "^2.0.4",
     "yarn": "^1.22.19",
     "yarn-api": "^1.1.0"
   },
