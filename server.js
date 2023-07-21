@@ -15,13 +15,28 @@ connectDB();
 
 const app = express();
 
+//1
+// app.use((req, res, next) => {
+//   res.header('Access-Control-Allow-Origin', 'https://mern-f1.vercel.app'); // Reemplaza con tu dominio permitido
+//   res.header('Access-Control-Allow-Origin', 'https://localhost:3000'); // Reemplaza con tu dominio permitido
+//   next();
+// });
+
+//2
+const allowedOrigins = [
+  'https://mern-f1.vercel.app',
+  'http://localhost:3000' // Ejemplo de una URL local
+  // Añadir más URLs permitidas según sea necesario
+];
+
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'https://mern-f1.vercel.app'); // Reemplaza con tu dominio permitido
-  res.header('Access-Control-Allow-Origin', 'https://localhost:3000'); // Reemplaza con tu dominio permitido
+  const origin = req.headers.origin;
+  if (allowedOrigins.includes(origin)) {
+    res.setHeader('Access-Control-Allow-Origin', origin);
+  }
   next();
 });
-
-
+  
 app.use(cors({
   //origin: ['https://localhost:3000', 'https://glittery-pasca-60dcc8.netlify.app','https://mern-f1.onrender.com'],
   origin: ['*','http://localhost:3000','https://react-simple.onrender.com','https://mern-f1.onrender.com','https://mern-f1.vercel.app'],
