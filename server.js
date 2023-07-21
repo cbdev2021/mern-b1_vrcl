@@ -17,6 +17,7 @@ const app = express();
 
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', 'https://mern-f1.vercel.app'); // Reemplaza con tu dominio permitido
+  res.header('Access-Control-Allow-Origin', 'https://localhost:3000'); // Reemplaza con tu dominio permitido
   next();
 });
 
