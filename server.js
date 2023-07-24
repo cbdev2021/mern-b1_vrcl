@@ -25,7 +25,8 @@ const app = express();
 //2
 const allowedOrigins = [
   'https://mern-f1.vercel.app',
-  'http://localhost:3000' // Ejemplo de una URL local
+  'http://localhost:3000',
+  'https://regbills-f1.vercel.app/'
   // Añadir más URLs permitidas según sea necesario
 ];
 
