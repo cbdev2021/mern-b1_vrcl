@@ -26,8 +26,7 @@ const app = express();
 const allowedOrigins = [
   'https://mern-f1.vercel.app',
   'http://localhost:3000',
-  'https://regbills-f1.vercel.app',
-  'https://automatic-doodle-56g4xg44qgvf4pjj-3000.app.github.dev/'
+  'https://regbills-f1.vercel.app'
   // Añadir más URLs permitidas según sea necesario
 ];
 
