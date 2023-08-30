@@ -41,7 +41,7 @@ app.use((req, res, next) => {
   
 app.use(cors({
   //origin: ['https://localhost:3000', 'https://glittery-pasca-60dcc8.netlify.app','https://mern-f1.onrender.com'],
-  origin: ['*','http://localhost:3000','https://react-simple.onrender.com','https://mern-f1.onrender.com','https://mern-f1.vercel.app'],
+  origin: ['*','https://localhost:3000','https://react-simple.onrender.com','https://mern-f1.onrender.com','https://mern-f1.vercel.app'],
   methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH']
 })); 
 
