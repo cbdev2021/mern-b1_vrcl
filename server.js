@@ -39,11 +39,23 @@ app.use((req, res, next) => {
   next();
 });
   
+// app.use(cors({
+//   //origin: ['https://localhost:3000', 'https://glittery-pasca-60dcc8.netlify.app','https://mern-f1.onrender.com'],
+//   origin: ['*','https://localhost:3000','https://react-simple.onrender.com','https://mern-f1.onrender.com','https://mern-f1.vercel.app'],
+//   methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH']
+// })); 
+
 app.use(cors({
-  //origin: ['https://localhost:3000', 'https://glittery-pasca-60dcc8.netlify.app','https://mern-f1.onrender.com'],
-  origin: ['*','https://localhost:3000','https://react-simple.onrender.com','https://mern-f1.onrender.com','https://mern-f1.vercel.app'],
-  methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH']
-})); 
+  origin: [
+    '*',
+    'https://localhost:3000',
+    'https://react-simple.onrender.com',
+    'https://mern-f1.onrender.com',
+    'https://mern-f1.vercel.app'
+  ],
+  methods: ['GET', 'POST', 'DELETE', 'UPDATE', 'PUT', 'PATCH'],
+}));
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
