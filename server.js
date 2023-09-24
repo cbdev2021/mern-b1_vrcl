@@ -55,7 +55,8 @@ app.use(cors({
     //'https://localhost:3000',
     'https://react-simple.onrender.com',
     'https://mern-f1.onrender.com',
-    'https://mern-f1.vercel.app'
+    'https://mern-f1.vercel.app',
+    'https://regbills-mui-f1.vercel.app'
   ],
   methods: ['GET', 'POST', 'DELETE', 'UPDATE', 'PUT', 'PATCH'],
 }));
