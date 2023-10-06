@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 const typeValuesSchema = mongoose.Schema(
   {
-    type: {
+    typevalue: {
       type: String,
       required: true,
     },
