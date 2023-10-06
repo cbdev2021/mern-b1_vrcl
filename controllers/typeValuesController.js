@@ -5,13 +5,13 @@ import TypeValues from '../models/typeValuesModel.js';
 // @route   POST /api/users/add-type-values
 // @access  Private
 const addTypeValues = asyncHandler(async (req, res) => {
-  const { type, subtype, description } = req.body;
+  const { typevalue, subtype, description } = req.body;
 
   const userId = req.user._id;
 
   try {
     const newTypeValues = await TypeValues.create({
-      type,
+        typevalue,
       subtype,
       description,
       idUsuario: userId, // Asocia el registro con el usuario autenticado
@@ -32,14 +32,14 @@ const addTypeValues = asyncHandler(async (req, res) => {
 // @route   PUT /api/users/update-type-values/:id
 // @access  Private
 const updateTypeValues = asyncHandler(async (req, res) => {
-  const { type, subtype, description } = req.body;
+  const { typevalue, subtype, description } = req.body;
 
   try {
     const typeValues = await TypeValues.findById(req.params.id);
 
     if (typeValues) {
       if (typeValues.idUsuario.toString() === req.user._id.toString()) {
-        typeValues.type = type;
+        typeValues.typevalue = typevalue;
         typeValues.subtype = subtype;
         typeValues.description = description;
 
